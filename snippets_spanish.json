@@ -1,0 +1,59 @@
+{
+  /*
+    https://gist.github.com/saintplay/880b71fffe94eb1ad02756852324328e
+         // Place your snippets for PHP here. Each snippet is defined under a snippet name and has a prefix, body and 
+         // description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+         // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+         // same ids are connected.
+         // Example:
+         "Print to console": {
+            "prefix": "log",
+            "body": [
+                "console.log('$1');",
+                "$2"
+            ],
+            "description": "Log output to console"
+        }
+    */
+  "Crear espacio": {
+    "prefix": "espacio",
+    "body": "<tr><td class=\"FacetDataTDM${1:16}\">&nbsp;</td></tr>",
+    "description": "Insertar 16px entre filas de una tabla"
+  },
+  "Etiqueta php": {
+    "prefix": "phpecho",
+    "body": "<?php echo \\$${1:variable}; ?>"
+  },
+  "Etiqueta php con función isset": {
+    "prefix": "phpisset",
+    "body": "<?php if (isset(\\$${1:variable})) echo \\$${1:variable}; ?>"
+  },
+  "Etiqueta php con función if": {
+    "prefix": "phpsi",
+    "body": "<?php if (\\$${1:variable}==\"${2:1}\") { ?>"
+  },
+  "Cierra un bloque php": {
+    "prefix": "phpend",
+    "body": "<?php } ?>"
+  },
+  "EQUIS y NEQUIS": {
+    "prefix": "phpequis",
+    "body": "<?php if (\\$${1:variable}=='${2:si}') echo \\$EQUIS; else echo \\$NEQUIS; ?>"
+  },
+  "Crear TD con nbsp": {
+    "prefix": "tdnbsp",
+    "body": "<td rowspan=\"${2:1}\" colspan=\"${1:1}\" class=\"${3:FacetDataTDM11}\">&nbsp;</td>"
+  },
+  "nbsp": {
+    "prefix": "nada",
+    "body": "&nbsp;"
+  },
+  "emsp": {
+    "prefix": "tab",
+    "body": "&emsp;"
+  },
+  "Condicional de sexo": {
+    "prefix": "phpsexo",
+    "body": "<?php if(\\$sexo==\"F\")echo ${1:\"Sra.\"}; else if(\\$sexo==\"M\")echo ${2:\"Sr.\"}; else echo  ${3:\"Sr.(a)\"}; ?>"
+  }
+}
