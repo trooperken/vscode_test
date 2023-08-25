@@ -46,9 +46,10 @@ CLASS DUMMY
      * @param  string  $value
      * @return string
      */
-    function wrap($value)
+    function wrap($value,$tag="div")
     {
         // If the value looks like a JSON selector, we will wrap it differently
+        $value='<'.$tag.'>'.$value.'</'.$tag.'>';
         return $value;
     }
 
