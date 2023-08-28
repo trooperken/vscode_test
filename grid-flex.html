@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Display Grid-Flex</title>
+  </head>
+  <style>
+    img {
+      width: 300px;
+    }
+
+    .flex {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .flex2 {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .flex2 > * {
+      flex: 1 1 200px;
+    }
+
+    .grid {
+      --column-count: 4;
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(var(--column-count), 1fr);
+    }
+
+    .grid[data-columns="2"] {
+      --column-count: 2;
+    }
+
+    .grid[data-columns="3"] {
+      --column-count: 3;
+    }
+
+    .grid[data-columns="4"] {
+      --column-count: 4;
+    }
+
+    .grid20 {
+      --column-count: 1;
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(var(--column-count), 1fr);
+    }
+
+    .grid3 {
+      --column-count: 1;
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    @media (width> 500px) {
+      .grid2 {
+        --column-count: 2;
+      }
+
+      .flex {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+
+      .flex > * {
+        flex-basis: 23%; /* flex: 1 1 23%; */
+        flex-grow: 1;
+      }
+    }
+
+    @media (width> 700px) {
+      .grid2 {
+        --column-count: 3;
+      }
+    }
+  </style>
+  <body>
+    <div class="flex2">
+      <div class="card">
+        <h2><a href="#">A Blog Post Flex</a></h2>
+        <img src="images/dataqueen.jpg" />
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam,
+          voluptate explicabo? Neque pariatur illum rerum ullam aut ipsa, soluta
+          assumenda ab aspernatur tempore temporibus sapiente animi omnis nemo
+          error praesentium.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2><a href="#">A Blog Post Flex</a></h2>
+        <img src="images/lake1.jpg" />
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam,
+          voluptate explicabo? Neque pariatur illum rerum ullam aut ipsa, soluta
+          assumenda ab aspernatur tempore temporibus sapiente animi omnis nemo
+          error praesentium.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2><a href="#">A Blog Post Flex</a></h2>
+        <img src="images/lake1.jpg" />
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam,
+          voluptate explicabo? Neque pariatur illum rerum ullam aut ipsa, soluta
+          assumenda ab aspernatur tempore temporibus sapiente animi omnis nemo
+          error praesentium.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2><a href="#">A Blog Post Flex</a></h2>
+        <img src="images/lake1.jpg" />
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam,
+          voluptate explicabo? Neque pariatur illum rerum ullam aut ipsa, soluta
+          assumenda ab aspernatur tempore temporibus sapiente animi omnis nemo
+          error praesentium.
+        </p>
+      </div>
+    </div>
+
+    <br />
+    <hr />
+    <br />
+
+    <div class="grid3">
+      <div class="card">
+        <h2><a href="#">A Blog Post Queen</a></h2>
+        <img src="images/dataqueen.jpg" />
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam,
+          voluptate explicabo? Neque pariatur illum rerum ullam aut ipsa, soluta
+          assumenda ab aspernatur tempore temporibus sapiente animi omnis nemo
+          error praesentium.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2><a href="#">A Blog Post Grid2</a></h2>
+        <img src="images/lake2.jpg" />
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam,
+          voluptate explicabo? Neque pariatur illum rerum ullam aut ipsa, soluta
+          assumenda ab aspernatur tempore temporibus sapiente animi omnis nemo
+          error praesentium.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2><a href="#">A Blog Post Grid2</a></h2>
+        <img src="images/lake2.jpg" />
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam,
+          voluptate explicabo? Neque pariatur illum rerum ullam aut ipsa, soluta
+          assumenda ab aspernatur tempore temporibus sapiente animi omnis nemo
+          error praesentium.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2><a href="#">A Blog Post Grid2</a></h2>
+        <img src="images/lake2.jpg" />
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam,
+          voluptate explicabo? Neque pariatur illum rerum ullam aut ipsa, soluta
+          assumenda ab aspernatur tempore temporibus sapiente animi omnis nemo
+          error praesentium.
+        </p>
+      </div>
+    </div>
+
+    <br />
+    <hr />
+    <br />
+
+    <div class="grid" data-columns="2">
+      <div class="card">
+        <h2><a href="#">A Blog Post Grid </a></h2>
+        <img src="images/lake3.jpg" />
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam,
+          voluptate explicabo? Neque pariatur illum rerum ullam aut ipsa, soluta
+          assumenda ab aspernatur tempore temporibus sapiente animi omnis nemo
+          error praesentium.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2><a href="#">A Blog Post Grid</a></h2>
+        <img src="images/lake3.jpg" />
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam,
+          voluptate explicabo? Neque pariatur illum rerum ullam aut ipsa, soluta
+          assumenda ab aspernatur tempore temporibus sapiente animi omnis nemo
+          error praesentium.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2><a href="#">A Blog Post Grid</a></h2>
+        <img src="images/lake3.jpg" />
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam,
+          voluptate explicabo? Neque pariatur illum rerum ullam aut ipsa, soluta
+          assumenda ab aspernatur tempore temporibus sapiente animi omnis nemo
+          error praesentium.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2><a href="#">A Blog Post Grid</a></h2>
+        <img src="images/lake3.jpg" />
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam,
+          voluptate explicabo? Neque pariatur illum rerum ullam aut ipsa, soluta
+          assumenda ab aspernatur tempore temporibus sapiente animi omnis nemo
+          error praesentium.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

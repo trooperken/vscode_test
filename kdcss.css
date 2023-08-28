@@ -1,0 +1,31 @@
+/* KDWebServices CSS */
+
+.kdgrid {
+  --column-count: 1;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.card img {
+  width: 300px; /* 15.625em */
+}
+
+.card p {
+  width: 15em;
+  text-align: left;
+}
+
+.card table {
+  width: 90%;
+}
+
+.card table th {
+  text-align: left;
+}
+
+.card table td {
+  text-align: right;
+}
+
+/* 5em => 16 * 5 = 80px  16 is the fontsize default for most browsers */
